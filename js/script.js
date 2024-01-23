@@ -24,7 +24,7 @@ const app = createApp({
     addTask() {
       if (this.newTask.trim() !== '') {
         this.lists.push({ id: this.lists.length + 1, done: false, text: this.newTask });
-        this.newTask = ''; // Resetta il campo di input dopo l'aggiunta del nuovo todo
+        this.newTask = '';
       }
     }
   }
