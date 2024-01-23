@@ -31,6 +31,9 @@
       <div class="container">
         <h1 class="text-center mt-5">Vue To Do List</h1>
         <h2 class="text-center">Cose da fare</h2>
+        <h2 v-if="lists.length === 0" class="text-center mt-3">
+          Non ci sono task.
+        </h2>
         <ul class="list-group d-flex align-items-center mt-5">
           <li
             v-for="(item, index) in lists"
