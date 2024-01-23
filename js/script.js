@@ -15,10 +15,13 @@ const app = createApp({
       };
     },
     methods: {
-        decorateText(item) {
-          return item.done ? `${item.text}` : item.text;
-        }
+      decorateText(item) {
+        return item.done ? `${item.text}` : item.text;
+      },
+      removeItem(i) {
+        this.lists.splice(i, 1);
       }
-});
+    }
+  });
   
 app.mount('#root');

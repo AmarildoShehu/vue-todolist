@@ -28,11 +28,19 @@
             <h1 class="text-center mt-5">Vue To Do List</h1>
             <h2 class="text-center">Cose da fare</h2>
             <ul class="list-group d-flex align-items-center mt-5">
-                <li v-for="(item, index) in lists" :key="index" 
-                class="list-group-item w-50"
-                :class="{'text-decoration-line-through': item.done }">
-                {{ decorateText(item) }}
-                </li>
+                <li 
+        v-for="(item, index) in lists" 
+        :key="index" 
+        class="list-group-item w-50 d-flex justify-content-between"
+        :class="{'text-decoration-line-through': item.done }">
+        <span>{{ decorateText(item) }}</span>
+        <button 
+          type="button" 
+          class="btn-close" s
+          aria-label="Close"
+          @click="removeItem(i)">
+        </button>
+      </li>
             </ul>
         </div>
     </div>   
