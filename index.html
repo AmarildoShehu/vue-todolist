@@ -20,6 +20,7 @@
       crossorigin="anonymous"
     />
 
+    <link rel="stylesheet" href="css/style.css" />
     <!-- Vue.js -->
     <script src="https://unpkg.com/vue@3"></script>
 
@@ -28,8 +29,9 @@
   </head>
   <body>
     <div id="root">
-      <div class="container">
-        <h1 class="text-center mt-5">Vue To Do List</h1>
+      <div class="container" id="shadow">
+        <h1 class="text-center mt-5 pt-4">Vue</h1>
+        <h1 class="text-center">To Do List</h1>
         <h2 class="text-center">Cose da fare</h2>
         <h2 v-if="lists.length === 0" class="text-center mt-3">
           Non ci sono task.
@@ -76,20 +78,19 @@
             placeholder="aggiungi task"
             @keyup.enter="addTask"
           />
-          <button @click="addTask" class="btn btn-primary">
+          <button @click="addTask" class="btn" id="mybtn">
             <i class="fas fa-plus"></i>
           </button>
         </div>
-        <div class="mt-4 d-flex align-items-center justify-content-center">
-          <div>
-            <button @click="markAllAsDone" class="btn btn-success">
-              Tutti Fatti
-            </button>
-            <button @click="markAllAsNotDone" class="btn btn-warning">
-              Tutti da Fare
-            </button>
-          </div>
-          <button @click="removeAll" class="btn btn-danger">
+        <div class="m-4 d-flex align-items-center justify-content-center pb-4">
+          <button @click="markAllAsDone" class="btn" id="mybtn">
+            Tutti Fatti
+          </button>
+          <button @click="markAllAsNotDone" class="btn" id="mybtn">
+            Tutti da Fare
+          </button>
+
+          <button @click="removeAll" class="btn" id="mybtn">
             Elimina Tutti
           </button>
         </div>
