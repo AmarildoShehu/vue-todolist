@@ -28,6 +28,15 @@ const app = createApp({
         this.lists.push({ id: this.lists.length + 1, done: false, text: this.newTask });
         this.newTask = '';
       }
+    },
+    markAllAsDone() {
+      this.lists.forEach(item => (item.done = true));
+    },
+    markAllAsNotDone() {
+      this.lists.forEach(item => (item.done = false));
+    },
+    removeAll() {
+      this.lists = [];
     }
   },
   computed: {

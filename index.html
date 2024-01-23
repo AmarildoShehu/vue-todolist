@@ -80,6 +80,19 @@
             <i class="fas fa-plus"></i>
           </button>
         </div>
+        <div class="mt-4 d-flex align-items-center justify-content-center">
+          <div>
+            <button @click="markAllAsDone" class="btn btn-success">
+              Tutti Fatti
+            </button>
+            <button @click="markAllAsNotDone" class="btn btn-warning">
+              Tutti da Fare
+            </button>
+          </div>
+          <button @click="removeAll" class="btn btn-danger">
+            Elimina Tutti
+          </button>
+        </div>
       </div>
     </div>
   </body>
