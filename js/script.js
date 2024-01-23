@@ -12,7 +12,8 @@ const app = createApp({
         { id: 3, done: false, text: 'Comprare una marca da bollo' },
         { id: 4, done: false, text: 'Aggiornare il PC' }
       ],
-      newTask: ''
+      newTask: '',
+      searchText: ''
     };
   },
   methods: {
@@ -27,6 +28,13 @@ const app = createApp({
         this.lists.push({ id: this.lists.length + 1, done: false, text: this.newTask });
         this.newTask = '';
       }
+    }
+  },
+  computed: {
+    filteredLists() {
+      return this.lists.filter(item =>
+        item.text.toLowerCase().includes(this.searchText.toLowerCase())
+      );
     }
   }
 });
